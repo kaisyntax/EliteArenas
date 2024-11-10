@@ -1,0 +1,30 @@
+name: EliteArenas
+main: com.kaisyntax.elitearenas.EliteArenas
+version: 1.0
+author: kaisyntax
+prefix: EliteArenas
+softdepend: [WorldEdit]
+api-version: 1.21
+commands:
+  elitearenas:
+    description: Manage the arenas
+    default: op
+    aliases: [ea, arena, arenas]
+    permission: EliteArenas.command
+permissions:
+  elitearenas:
+    default: op
+    children:
+      elitearenas.reload: true
+      elitearenas.create: true
+      elitearenas.list: true
+      elitearenas.reset: true
+      elitearenas.cancel: true
+      elitearenas.border: true
+      elitearenas.remove: true
+      elitearenas.debug: true
+      elitearenas.info: true
+    description: Use the elitearenas command
+  elitearenas.reset.instant:
+    description: Reset arenas instantly
+    default: false
